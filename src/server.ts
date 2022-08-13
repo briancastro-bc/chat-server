@@ -1,7 +1,7 @@
 import express, { Application } from "express";
 import * as http from 'http';
 
-import { sio } from './io';
+import sio from './io';
 
 async function main(): Promise<void> {
 
@@ -28,4 +28,4 @@ async function main(): Promise<void> {
 
 main()
   .then(() => console.log("Startup server"))
-  .catch((err: any) => console.error(err));
+  .catch((err: any) => console.error('ERROR:: ',err));
