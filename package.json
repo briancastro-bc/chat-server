@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
-  "type": "module",
   "scripts": {
-    "build": "npx tsc",
-    "start": "nodemon ./dist/server",
-    "dev": "concurrently -k \"npx tsc --watch\" \"nodemon ./dist/server.js\""
+    "clean": "rm -rf dist",
+    "prestart": "npm run clean && tsc --project .",
+    "dev": "npm run prestart && nodemon dist/src/server.js"
+
   },
   "keywords": [],
   "author": "",

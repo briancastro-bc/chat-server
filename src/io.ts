@@ -85,4 +85,4 @@ sio.on("connection", (socket: CustomSocket) => {
 
 });
 
-export { sio };
+export default sio;
